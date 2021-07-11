@@ -155,7 +155,8 @@ int main(int argc, char const *argv[]) {
                             exit(1);
                         }
 
-                        _gl_is_in_loop = 1;
+                        // Cek _gl_condition
+                        _gl_is_in_loop = _gl_condition;
                         while (_gl_is_in_loop) {
                             for (int i = 0; i < _gl_int_buf_pt; i++)
                                 parse_token(_gl_int_buffer[i]);
